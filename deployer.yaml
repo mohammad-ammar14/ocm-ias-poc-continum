@@ -1,0 +1,18 @@
+apiVersion: delivery.ocm.software/v1alpha1
+kind: FluxDeployer
+metadata:
+  name: continuum-system
+  namespace: ocm-system
+spec:
+  interval: 1s
+  sourceRef:
+    kind: Resource
+    name: continuum-system
+    namespace: ocm-system
+  helmReleaseTemplate:
+    chart:
+      spec:
+        chart: continuum-system
+        version: 1.0.0
+        interval: 1s
+    interval: 1s

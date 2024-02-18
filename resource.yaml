@@ -1,0 +1,16 @@
+apiVersion: delivery.ocm.software/v1alpha1
+kind: Resource
+metadata:
+  name: continuum-system
+  namespace: ocm-system
+spec:
+  interval: 1s
+  sourceRef:
+    kind: ComponentVersion
+    name: component-version-continuum-system
+    namespace: ocm-system
+    resourceRef:
+      name: continuum-system
+      version: 1.0.0
+      extraIdentity:
+        helmChart: continuum-system

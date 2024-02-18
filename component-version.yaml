@@ -1,0 +1,15 @@
+apiVersion: delivery.ocm.software/v1alpha1
+kind: ComponentVersion
+metadata:
+  name: component-version-continuum-system
+  namespace: ocm-system
+spec:
+  interval: 1s
+  component: github.tools/continum
+  references:
+    expand: true
+  version:
+    semver: 1.0.0
+  repository:
+    url: 'https://ocm-landscaper.common.repositories.cloud.sap' #
+  serviceAccountName: registry-sa
